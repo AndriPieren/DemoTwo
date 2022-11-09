@@ -14,7 +14,8 @@
     <properties>
         <!-- The class that will be started, choose one and only one -->
 
-        <launcher.class>com.pi4j.mvc/com.pi4j.setup.HelloFX</launcher.class>
+        <launcher.class>com.pi4j.mvc/com.pi4j.mvc.blackoutapp.AppStarter</launcher.class>
+        <!-- <launcher.class>com.pi4j.mvc/com.pi4j.setup.HelloFX</launcher.class> -->
         <!-- <launcher.class>com.pi4j.mvc/com.pi4j.setup.MinimalPi4J</launcher.class> -->
         <!-- <launcher.class>com.pi4j.mvc/com.pi4j.mvc.templateapp.AppStarter</launcher.class> -->
         <!-- <launcher.class>com.pi4j.mvc/com.pi4j.mvc.templatepuiapp.AppStarter</launcher.class> -->

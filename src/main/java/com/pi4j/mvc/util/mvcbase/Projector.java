@@ -39,7 +39,7 @@ interface Projector<M, C extends ControllerBase<M>> {
      *
      * There's no need to have access to model for this task.
      *
-     * All EventHandlers will call a single method on the Controller.
+     * All EventHandle"Energysource: " + rs will call a single method on the Controller.
      *
      * If you are about to call more than one method, you should introduce a new method on Controller.
      */
