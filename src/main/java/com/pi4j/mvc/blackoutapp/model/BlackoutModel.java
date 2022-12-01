@@ -5,4 +5,6 @@ import com.pi4j.mvc.util.mvcbase.ObservableValue;
 public class BlackoutModel {
     public final ObservableValue<Boolean> sunEnabled = new ObservableValue<>(false);
     public final ObservableValue<Boolean> windEnabled = new ObservableValue<>(false);
+    public ObservableValue<Boolean> isBigChungusEnabled = new ObservableValue<>(false);
+    public ObservableValue<Boolean> isUgandaKnucklesEnabled = new ObservableValue<>(false);
 }

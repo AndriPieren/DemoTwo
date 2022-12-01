@@ -36,4 +36,14 @@ public class BlackoutController extends ControllerBase<BlackoutModel> {
     public void toggleWind() {
         toggle(model.windEnabled);
     }
+
+    public void toggleBigChungus() {
+        System.out.println("Big Chungus was toggeled");
+        toggle(model.isBigChungusEnabled);
+    }
+
+    public void toggleUgandaKnuckles() {
+        System.out.println("Uganda Knuckles was toggeled");
+        toggle(model.isUgandaKnucklesEnabled);
+    }
 }

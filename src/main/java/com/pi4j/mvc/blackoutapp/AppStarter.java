@@ -4,13 +4,22 @@ import com.pi4j.mvc.blackoutapp.controller.BlackoutController;
 import com.pi4j.mvc.blackoutapp.model.BlackoutModel;
 import com.pi4j.mvc.blackoutapp.view.gui.BlackoutGui;
 import com.pi4j.mvc.blackoutapp.view.gui.PuiEmulator;
+import com.pi4j.mvc.blackoutapp.view.gui.SecondaryGui;
 import com.pi4j.mvc.blackoutapp.view.pui.BlackoutPui;
 import com.pi4j.mvc.util.Pi4JContext;
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class AppStarter extends Application {
+    private static final boolean IS_FULLSCREEN = true;
     private BlackoutController controller;
     private BlackoutPui pui;
 
@@ -26,13 +35,14 @@ public class AppStarter extends Application {
         var gui = new BlackoutGui(controller);
         var scene = new Scene(gui);
         stage.setTitle("Blackout Demo Application");
-        stage.setHeight(600);
+        stage.setHeight(480);
         stage.setWidth(800);
         stage.setScene(scene);
+        stage.setFullScreen(IS_FULLSCREEN);
         stage.show();
 
-        // TODO implement emulator
-        startPuiEmulator(new PuiEmulator(controller));
+        //startPuiEmulator(new PuiEmulator(controller));
+        //startSecondaryWindow();
     }
 
     @Override
@@ -49,5 +59,18 @@ public class AppStarter extends Application {
         emulatorStage.setHeight(600);
         emulatorStage.setScene(emulatorScene);
         emulatorStage.show();
+    }
+
+    private void startSecondaryWindow() {
+        var gui = new SecondaryGui(controller);
+        var secondaryScene = new Scene(gui);
+        var secondaryStage = new Stage();
+        secondaryStage.setTitle("Zweites Fenster");
+        secondaryStage.setWidth(800);
+        secondaryStage.setHeight(600);
+        secondaryStage.setFullScreen(IS_FULLSCREEN);
+        secondaryStage.setScene(secondaryScene);
+        secondaryStage.show();
+
     }
 }
